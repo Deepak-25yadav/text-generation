@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectToDatabase } from './src/config/db.js';
 import textRoutes from './src/routes/text.routes.js';
+import imageRoutes from './src/routes/image.routes.js';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 
 // API routes
 app.use('/api', textRoutes);
+app.use('/api/image', imageRoutes);
 
 async function start() {
   try {
