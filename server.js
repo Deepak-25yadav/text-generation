@@ -5,6 +5,7 @@ import { connectToDatabase } from './src/config/db.js';
 import textRoutes from './src/routes/text.routes.js';
 import imageRoutes from './src/routes/image.routes.js';
 import quizRoutes from './src/routes/quiz.routes.js';
+import adgmQuizRoutes from './src/routes/adgmQuiz.routes.js';
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 app.use('/api', textRoutes);
 app.use('/api/image', imageRoutes);
 app.use('/api/quiz', quizRoutes);
+app.use('/api/adgm-quiz', adgmQuizRoutes);
 
 async function start() {
   try {

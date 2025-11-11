@@ -38,6 +38,8 @@ export async function generateQuiz(req, res) {
       }
     );
 
+     console.log("quizData in quiz.controller.js 🍕🍕",quizData)
+
     // Save quiz to MongoDB
     const savedQuiz = await Quiz.create({
       title: quizData.title,
